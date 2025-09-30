@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-@Table(name = "usarios")
+@Table(name = "usuarios")
 @Entity(name = "usuario")
 @Getter
 @NoArgsConstructor
