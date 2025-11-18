@@ -22,7 +22,6 @@ public class SecurityFilter extends OncePerRequestFilter {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         System.out.println("Chamada ao Filtro!");
@@ -43,7 +42,7 @@ public class SecurityFilter extends OncePerRequestFilter {
     private String recuperarToken(HttpServletRequest request) {
         var authorizationHeader = request.getHeader("Authorization");
 
-        if (authorizationHeader != null) { // INVERTIDO! Se NÃO for null
+        if (authorizationHeader != null) {
             return authorizationHeader.replace("Bearer ", "");
         }
 
